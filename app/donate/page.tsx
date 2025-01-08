@@ -223,7 +223,6 @@ export default function DonatePage() {
           </motion.div>
         </div>
 
-        {/* Impact Section */}
         <motion.section
           initial="hidden"
           animate="visible"
