@@ -11,7 +11,7 @@ export default function BlogPage() {
     <div className="container mx-auto px-4 py-8">
       
       <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
-        MSI Blog: Insights & Stories
+        Smart Kids: Insights & Stories
       </h1>
 
       {posts.length === 0 ? (
