@@ -143,18 +143,18 @@ export default function Home() {
                 description: "Engaging holiday camps and workshops that combine learning with fun activities."
               }
             ].map((service, index) => (
-              <motion.div 
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </motion.div>
-            ))}
+            <motion.div 
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
+            </motion.div>
+          ))}
           </div>
         </div>
       </section>

@@ -117,15 +117,15 @@ export default function Header() {
             >
               Services
             </Link>
-            <Link
+                <Link
               href="/impact"
-              className={cn(
+                  className={cn(
                 "text-sm font-medium transition-colors hover:text-theme-gold",
                 isScrolled ? "text-white" : "text-theme-darkBlue"
-              )}
-            >
+                  )}
+                >
               Impact
-            </Link>
+                </Link>
             <Link
               href="/gallery"
               className={cn(
@@ -152,7 +152,7 @@ export default function Header() {
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Link href="/resources/student-portal">Student Portal</Link>
-                </DropdownMenuItem>
+                  </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Link
@@ -213,28 +213,28 @@ export default function Header() {
             )}
           </button>
         </div>
-      </div>
+        </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+        <AnimatePresence>
         {isMenuOpen && (
-          <>
-            <motion.div
+            <>
+              <motion.div
               className="fixed inset-0 bg-black bg-opacity-50 z-40"
-              variants={backdropVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
+                variants={backdropVariants}
+                initial="closed"
+                animate="open"
+                exit="closed"
               onClick={() => setIsMenuOpen(false)}
-            />
-            <motion.div
+              />
+              <motion.div
               className="fixed right-0 top-0 h-full w-64 bg-theme-darkBlue p-6 z-50"
-              variants={menuVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-            >
-              <div className="flex flex-col space-y-4">
+                variants={menuVariants}
+                initial="closed"
+                animate="open"
+                exit="closed"
+              >
+                <div className="flex flex-col space-y-4">
                 <Link
                   href="/"
                   className="text-white hover:text-theme-gold transition-colors"
@@ -263,16 +263,16 @@ export default function Header() {
                 >
                   Impact
                 </Link>
-                <Link
+                      <Link
                   href="/gallery"
                   className="text-white hover:text-theme-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Gallery
-                </Link>
+                      </Link>
                 <DropdownMenu trigger={
                   <button className="text-white hover:text-theme-gold transition-colors">
-                    Resources
+                      Resources
                   </button>
                 }>
                   <DropdownMenuContent>
@@ -287,13 +287,13 @@ export default function Header() {
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-                <Link
+                        <Link
                   href="/blog"
                   className="text-white hover:text-theme-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Blog
-                </Link>
+                        </Link>
                 <Link
                   href="/contact"
                   className="text-white hover:text-theme-gold transition-colors"
@@ -301,18 +301,18 @@ export default function Header() {
                 >
                   Contact
                 </Link>
-                <Button 
-                  asChild
+                    <Button 
+                      asChild 
                   className="bg-theme-gold text-theme-darkBlue hover:bg-white hover:text-theme-darkBlue"
                   onClick={() => setIsMenuOpen(false)}
-                >
-                  <Link href="/donate">Donate Now</Link>
-                </Button>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+                    >
+                      <Link href="/donate">Donate Now</Link>
+                    </Button>
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
     </header>
   )
 }
