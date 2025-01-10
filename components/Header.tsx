@@ -82,7 +82,7 @@ export default function Header() {
             />
             <span className={cn(
               "font-bold text-xl",
-              isScrolled ? "text-white" : "text-theme-darkBlue"
+              "text-white"
             )}>
               Smart Kids X
             </span>
@@ -94,7 +94,7 @@ export default function Header() {
               href="/"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-theme-gold",
-                isScrolled ? "text-white" : "text-theme-darkBlue"
+                "text-white"
               )}
             >
               Home
@@ -103,7 +103,7 @@ export default function Header() {
               href="/about"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-theme-gold",
-                isScrolled ? "text-white" : "text-theme-darkBlue"
+                "text-white"
               )}
             >
               About
@@ -112,25 +112,25 @@ export default function Header() {
               href="/services"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-theme-gold",
-                isScrolled ? "text-white" : "text-theme-darkBlue"
+                "text-white"
               )}
             >
               Services
             </Link>
-                <Link
+            <Link
               href="/impact"
-                  className={cn(
+              className={cn(
                 "text-sm font-medium transition-colors hover:text-theme-gold",
-                isScrolled ? "text-white" : "text-theme-darkBlue"
-                  )}
-                >
+                "text-white"
+              )}
+            >
               Impact
-                </Link>
+            </Link>
             <Link
               href="/gallery"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-theme-gold",
-                isScrolled ? "text-white" : "text-theme-darkBlue"
+                "text-white"
               )}
             >
               Gallery
@@ -138,7 +138,7 @@ export default function Header() {
             <DropdownMenu trigger={
               <button className={cn(
                 "text-sm font-medium transition-colors hover:text-theme-gold",
-                isScrolled ? "text-white" : "text-theme-darkBlue"
+                "text-white"
               )}>
                 Resources
               </button>
@@ -152,14 +152,14 @@ export default function Header() {
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Link href="/resources/student-portal">Student Portal</Link>
-                  </DropdownMenuItem>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Link
               href="/blog"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-theme-gold",
-                isScrolled ? "text-white" : "text-theme-darkBlue"
+                "text-white"
               )}
             >
               Blog
@@ -168,7 +168,7 @@ export default function Header() {
               href="/contact"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-theme-gold",
-                isScrolled ? "text-white" : "text-theme-darkBlue"
+                "text-white"
               )}
             >
               Contact
@@ -181,7 +181,7 @@ export default function Header() {
               href="tel:+27437262171" 
               className={cn(
                 "text-sm hover:text-theme-gold",
-                isScrolled ? "text-white" : "text-theme-darkBlue"
+                "text-white"
               )}
             >
               <PhoneIcon className="h-5 w-5 inline mr-2" />
