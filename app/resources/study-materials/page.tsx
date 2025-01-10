@@ -59,7 +59,7 @@ export default function StudyMaterials() {
                 >
                   <div className="p-6">
                     <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                      <Book className="w-5 h-5 mr-2 text-red-600" />
+                      <Book className="w-5 h-5 mr-2 text-theme-darkBlue" />
                       {subject.title}
                     </h2>
                     <div className="space-y-4">
@@ -76,7 +76,7 @@ export default function StudyMaterials() {
                             </div>
                           </div>
                           <button
-                            className="p-2 text-red-600 hover:text-red-700 transition-colors"
+                            className="p-2 text-theme-darkBlue hover:text-theme-gold transition-colors"
                             aria-label="Download"
                           >
                             <Download className="w-4 h-4" />
@@ -92,7 +92,7 @@ export default function StudyMaterials() {
             {/* Video Tutorials Section */}
             <div className="mt-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <Video className="w-6 h-6 mr-2 text-red-600" />
+                <Video className="w-6 h-6 mr-2 text-theme-darkBlue" />
                 Video Tutorials
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

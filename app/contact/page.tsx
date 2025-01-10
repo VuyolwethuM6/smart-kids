@@ -94,7 +94,7 @@ export default function Contact() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-red-600 text-white overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-theme-darkBlue text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container relative mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -127,7 +127,7 @@ export default function Contact() {
               transition={{ delay: 0.3 }}
               className="bg-white rounded-2xl shadow-xl p-8"
             >
-              <h2 className="text-3xl font-bold mb-8">Send us a Message</h2>
+              <h2 className="text-3xl font-bold mb-8 text-theme-darkBlue">Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -138,7 +138,7 @@ export default function Contact() {
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-theme-gold focus:border-transparent"
                     required
                   />
                 </div>
@@ -151,7 +151,7 @@ export default function Contact() {
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-theme-gold focus:border-transparent"
                     required
                   />
                 </div>
@@ -164,7 +164,7 @@ export default function Contact() {
                     id="subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-theme-gold focus:border-transparent"
                     required
                   />
                 </div>
@@ -177,13 +177,13 @@ export default function Contact() {
                     rows={6}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-theme-gold focus:border-transparent"
                     required
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors duration-300"
+                  className="w-full bg-theme-darkBlue text-white py-3 px-6 rounded-lg hover:bg-theme-gold hover:text-theme-darkBlue transition-colors duration-300"
                 >
                   Send Message
                 </button>
@@ -198,15 +198,15 @@ export default function Contact() {
                 transition={{ delay: 0.4 }}
                 className="bg-white rounded-2xl shadow-xl p-8"
               >
-                <h2 className="text-3xl font-bold mb-8">Contact Information</h2>
+                <h2 className="text-3xl font-bold mb-8 text-theme-darkBlue">Contact Information</h2>
                 <div className="space-y-6">
                   {contactInfo.map((item, index) => (
                     <div key={index} className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600">
+                      <div className="flex-shrink-0 w-12 h-12 bg-theme-lightBlue rounded-full flex items-center justify-center text-theme-darkBlue">
                         {item.icon}
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold">{item.title}</h3>
+                        <h3 className="text-lg font-semibold text-theme-darkBlue">{item.title}</h3>
                         <p className="text-gray-600">{item.info}</p>
                       </div>
                     </div>
@@ -221,7 +221,7 @@ export default function Contact() {
                 transition={{ delay: 0.5 }}
                 className="bg-white rounded-2xl shadow-xl p-8"
               >
-                <h2 className="text-3xl font-bold mb-8">Follow Us</h2>
+                <h2 className="text-3xl font-bold mb-8 text-theme-darkBlue">Follow Us</h2>
                 <div className="flex space-x-6">
                   {socialLinks.map((social, index) => (
                     <a
@@ -229,7 +229,7 @@ export default function Contact() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-red-100 hover:text-red-600 transition-colors duration-300"
+                      className="w-12 h-12 bg-theme-lightBlue rounded-full flex items-center justify-center text-theme-darkBlue hover:bg-theme-gold hover:text-theme-darkBlue transition-colors duration-300"
                     >
                       {social.icon}
                     </a>

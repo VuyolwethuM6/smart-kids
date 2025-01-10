@@ -77,7 +77,7 @@ export default function Services() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-red-600 text-white overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-theme-darkBlue text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container relative mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -177,9 +177,7 @@ export default function Services() {
                   </div>
                 </div>
                 <div className="lg:w-1/2">
-                  <span className="text-red-600 font-medium text-lg">
-                    {service.category}
-                  </span>
+                  <p className="text-theme-gold font-medium text-lg">{service.category}</p>
                   <h3 className="text-3xl font-bold mt-2 mb-6 text-gray-900">
                     {service.title}
                   </h3>
@@ -189,7 +187,7 @@ export default function Services() {
                   <ul className="space-y-4">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-3 text-gray-700">
-                        <svg className="w-5 h-5 text-red-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-theme-darkBlue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                         {feature}
@@ -204,7 +202,7 @@ export default function Services() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-red-600 text-white">
+      <section className="py-24 bg-theme-darkBlue text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial="hidden"
@@ -219,12 +217,9 @@ export default function Services() {
             <p className="text-xl mb-12 opacity-90">
               Join our programs today and take the first step towards academic excellence.
             </p>
-            <Button 
-              size="lg"
-              className="bg-white text-red-600 hover:bg-gray-100 text-lg px-12 py-6"
-            >
+            <button className="bg-white text-theme-darkBlue hover:bg-theme-lightBlue text-lg px-12 py-6">
               Enroll Now
-            </Button>
+            </button>
           </motion.div>
         </div>
       </section>

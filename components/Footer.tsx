@@ -22,7 +22,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300">
+    <footer className="bg-theme-darkBlue text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
         <motion.div 
@@ -49,18 +49,14 @@ const Footer = () => {
               {socialLinks.map((social) => {
                 const Icon = social.icon
                 return (
-                  <motion.a
+                  <Link
                     key={social.label}
                     href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-700 p-2 rounded-full hover:bg-red-600 transition-colors duration-300"
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-theme-gold text-theme-darkBlue hover:bg-white transition-colors"
                     aria-label={social.label}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
                   >
                     <Icon className="w-4 h-4" />
-                  </motion.a>
+                  </Link>
                 )
               })}
             </div>
@@ -68,65 +64,59 @@ const Footer = () => {
 
           {/* Quick Links */}
           <motion.div variants={fadeInUp} className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-theme-gold">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
-                <motion.li 
-                  key={link.name}
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
+                <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="hover:text-red-500 transition-colors duration-300 flex items-center space-x-2"
+                    className="text-sm hover:text-theme-gold transition-colors"
                   >
-                    <span className="text-red-500">›</span>
-                    <span>{link.name}</span>
+                    {link.name}
                   </Link>
-                </motion.li>
+                </li>
               ))}
             </ul>
           </motion.div>
 
           {/* Contact Info */}
           <motion.div variants={fadeInUp} className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Contact Us</h3>
+            <h3 className="text-lg font-semibold text-theme-gold">Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <FaMapMarkerAlt className="w-5 h-5 text-red-500 mt-1" />
-                <span>123 Main St, East London, Eastern Cape, South Africa</span>
+              <li className="flex items-center space-x-3">
+                <FaPhone className="text-theme-gold" />
+                <span className="text-sm">+27 43 726 2171</span>
               </li>
               <li className="flex items-center space-x-3">
-                <FaPhone className="w-4 h-4 text-red-500" />
-                <span>+27 43 726 2171</span>
+                <FaEnvelope className="text-theme-gold" />
+                <span className="text-sm">info@smartkidsx.org</span>
               </li>
               <li className="flex items-center space-x-3">
-                <FaEnvelope className="w-4 h-4 text-red-500" />
-                <a 
-                  href="mailto:info@mathsandscienceinfinity.org.za" 
-                  className="hover:text-red-500 transition-colors duration-300"
-                >
-                  info@mathsandscienceinfinity.org.za
-                </a>
+                <FaMapMarkerAlt className="text-theme-gold" />
+                <span className="text-sm">123 Main Street, East London, 5201</span>
               </li>
             </ul>
           </motion.div>
 
           {/* Operating Hours */}
           <motion.div variants={fadeInUp} className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Operating Hours</h3>
-            <ul className="space-y-2">
-              <li className="flex justify-between">
-                <span>Monday - Friday:</span>
-                <span>8:00 AM - 5:00 PM</span>
+            <h3 className="text-lg font-semibold text-theme-gold">Operating Hours</h3>
+            <ul className="space-y-3">
+              <li className="flex justify-between items-center">
+                <span className="text-sm">Monday - Friday:</span>
+                <span className="text-sm text-theme-gold">8:00 AM - 5:00 PM</span>
               </li>
-              <li className="flex justify-between">
-                <span>Saturday:</span>
-                <span>9:00 AM - 1:00 PM</span>
+              <li className="flex justify-between items-center">
+                <span className="text-sm">Saturday:</span>
+                <span className="text-sm text-theme-gold">9:00 AM - 1:00 PM</span>
               </li>
-              <li className="flex justify-between">
-                <span>Sunday:</span>
-                <span>Closed</span>
+              <li className="flex justify-between items-center">
+                <span className="text-sm">Sunday:</span>
+                <span className="text-sm text-theme-gold">Closed</span>
+              </li>
+              <li className="flex justify-between items-center">
+                <span className="text-sm">Public Holidays:</span>
+                <span className="text-sm text-theme-gold">Closed</span>
               </li>
             </ul>
           </motion.div>
@@ -134,21 +124,11 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-gray-700">
+      <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm">
-              &copy; {new Date().getFullYear()} Maths and Science Infinity. All rights reserved.
-            </p>
-            <div className="flex space-x-6 text-sm">
-              <Link href="/privacy-policy" className="hover:text-red-500 transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="hover:text-red-500 transition-colors duration-300">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
+          <p className="text-sm text-center">
+            © {new Date().getFullYear()} Smart Kids X Academy. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

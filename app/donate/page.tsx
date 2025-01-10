@@ -67,7 +67,7 @@ export default function DonatePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-red-600 text-white overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-theme-darkBlue text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -235,17 +235,17 @@ export default function DonatePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <GraduationCap className="w-8 h-8 text-red-600" />,
+                icon: <GraduationCap className="w-8 h-8 text-theme-darkBlue" />,
                 title: "Student Success",
                 description: "Your donation directly supports students in achieving their academic goals through quality STEM education."
               },
               {
-                icon: <Boxes className="w-8 h-8 text-red-600" />,
+                icon: <Boxes className="w-8 h-8 text-theme-darkBlue" />,
                 title: "Better Resources",
                 description: "Help us provide state-of-the-art learning materials and equipment for hands-on STEM experiences."
               },
               {
-                icon: <Sparkles className="w-8 h-8 text-red-600" />,
+                icon: <Sparkles className="w-8 h-8 text-theme-darkBlue" />,
                 title: "Brighter Future",
                 description: "Contribute to building the next generation of scientists, engineers, and innovators in our community."
               }
@@ -274,7 +274,7 @@ export default function DonatePage() {
               { number: '10+', label: 'Years of Impact' }
             ].map((stat) => (
               <div key={stat.label} className="space-y-2">
-                <div className="text-3xl font-bold text-red-600">{stat.number}</div>
+                <div className="text-3xl font-bold text-theme-darkBlue">{stat.number}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </div>
             ))}

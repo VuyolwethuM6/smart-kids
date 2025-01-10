@@ -1,4 +1,9 @@
 {
+  "/about/page": "app/about/page.js",
   "/page": "app/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/resources/student-portal/page": "app/resources/student-portal/page.js",
+  "/services/page": "app/services/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/resources/past-papers/page": "app/resources/past-papers/page.js"
 }

@@ -210,7 +210,7 @@ export default function PastPapers() {
             <div className="w-full sm:hidden">
               <button 
                 onClick={() => setIsMobileFiltersOpen(!isMobileFiltersOpen)}
-                className="w-full flex items-center justify-center py-3 bg-red-500 text-white rounded-lg"
+                className="w-full flex items-center justify-center py-3 bg-theme-darkBlue text-white rounded-lg hover:bg-theme-gold hover:text-theme-darkBlue"
               >
                 <Filter className="w-5 h-5 mr-2" />
                 {isMobileFiltersOpen ? 'Close Filters' : 'Open Filters'}
@@ -232,7 +232,7 @@ export default function PastPapers() {
                   value={searchTerm} 
                   onChange={(e) => setSearchTerm(e.target.value)} 
                   placeholder="Search papers" 
-                  className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500"
+                  className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-theme-darkBlue"
                 />
               </div>
 
@@ -241,7 +241,7 @@ export default function PastPapers() {
                 <select 
                   value={selectedGrade || ''} 
                   onChange={(e) => setSelectedGrade(e.target.value || null)}
-                  className="w-full appearance-none pl-4 pr-8 py-2 border rounded-lg focus:ring-2 focus:ring-red-500"
+                  className="w-full appearance-none pl-4 pr-8 py-2 border rounded-lg focus:ring-2 focus:ring-theme-darkBlue"
                 >
                   <option value="">All Grades</option>
                   {uniqueGrades.map((grade) => (
@@ -256,7 +256,7 @@ export default function PastPapers() {
                 <select 
                   value={selectedYear || ''} 
                   onChange={(e) => setSelectedYear(e.target.value ? Number(e.target.value) : null)}
-                  className="w-full appearance-none pl-4 pr-8 py-2 border rounded-lg focus:ring-2 focus:ring-red-500"
+                  className="w-full appearance-none pl-4 pr-8 py-2 border rounded-lg focus:ring-2 focus:ring-theme-darkBlue"
                 >
                   <option value="">All Years</option>
                   {uniqueYears.map((year) => (
@@ -271,7 +271,7 @@ export default function PastPapers() {
                 <select 
                   value={selectedTerm || ''} 
                   onChange={(e) => setSelectedTerm(e.target.value || null)}
-                  className="w-full appearance-none pl-4 pr-8 py-2 border rounded-lg focus:ring-2 focus:ring-red-500"
+                  className="w-full appearance-none pl-4 pr-8 py-2 border rounded-lg focus:ring-2 focus:ring-theme-darkBlue"
                 >
                   <option value="">All Terms</option>
                   {uniqueTerms.map((term) => (
@@ -287,7 +287,7 @@ export default function PastPapers() {
               <div className="mt-4 flex justify-center">
                 <button 
                   onClick={resetFilters}
-                  className="flex items-center px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
+                  className="flex items-center px-4 py-2 bg-theme-darkBlue text-white rounded-lg hover:bg-theme-gold hover:text-theme-darkBlue transition-colors"
                 >
                   <X className="w-5 h-5 mr-2" />
                   Reset Filters
@@ -307,12 +307,12 @@ export default function PastPapers() {
               ].filter(filter => filter.value).map((filter) => (
                 <div 
                   key={filter.label} 
-                  className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs flex items-center"
+                  className="bg-theme-lightBlue text-theme-darkBlue px-3 py-1 rounded-full text-xs flex items-center"
                 >
                   {filter.label}: {filter.value}
                   <button 
                     onClick={filter.clear}
-                    className="ml-2 hover:text-red-600"
+                    className="ml-2 hover:text-theme-gold"
                   >
                     <X className="w-3 h-3" />
                   </button>
@@ -337,7 +337,7 @@ export default function PastPapers() {
               </p>
               <button 
                 onClick={resetFilters}
-                className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors flex items-center mx-auto"
+                className="px-6 py-3 bg-theme-darkBlue text-white rounded-lg hover:bg-theme-gold hover:text-theme-darkBlue transition-colors flex items-center mx-auto"
               >
                 <X className="w-5 h-5 mr-2" />
                 Reset Filters
@@ -360,7 +360,7 @@ export default function PastPapers() {
                     >
                       <div className="p-6">
                         <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                          <FileText className="w-5 h-5 mr-2 text-red-600" />
+                          <FileText className="w-5 h-5 mr-2 text-theme-darkBlue" />
                           {subject.title}
                           <span className="ml-2 text-sm text-gray-500">
                             ({gradeGroup.grade}, {yearGroup.year} {termGroup.term})
@@ -381,7 +381,7 @@ export default function PastPapers() {
                               </div>
                               <button
                                 onClick={() => handleDownload(item)}
-                                className="p-2 text-red-600 hover:text-red-700 transition-colors"
+                                className="p-2 text-theme-darkBlue hover:text-theme-gold transition-colors"
                                 aria-label="Download"
                               >
                                 <Download className="w-4 h-4" />

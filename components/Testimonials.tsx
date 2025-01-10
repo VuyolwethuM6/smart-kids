@@ -77,7 +77,7 @@ const Testimonials = () => {
                 >
                   {/* Quote Icon */}
                   <div className="absolute -top-4 right-8">
-                    <div className="bg-red-500 rounded-full p-2 shadow-lg">
+                    <div className="bg-theme-gold rounded-full p-2 shadow-lg">
                       <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         className="w-6 h-6 text-white transform rotate-180" 
@@ -110,12 +110,12 @@ const Testimonials = () => {
                           src={testimonial.image} 
                           alt={testimonial.name}
                           fill
-                          className="rounded-full object-cover ring-4 ring-red-50"
+                          className="rounded-full object-cover ring-4 ring-theme-lightBlue"
                         />
                       </div>
                       <div>
                         <h3 className="font-bold text-gray-900">{testimonial.name}</h3>
-                        <p className="text-red-600 text-sm">{testimonial.role}</p>
+                        <p className="text-theme-darkBlue text-sm">{testimonial.role}</p>
                       </div>
                     </div>
                   </div>
@@ -132,7 +132,7 @@ const Testimonials = () => {
               key={index}
               className={`transition-all duration-300 ${
                 selectedIndex === index 
-                  ? 'w-8 bg-red-600' 
+                  ? 'w-8 bg-theme-darkBlue' 
                   : 'w-2 bg-gray-300 hover:bg-gray-400'
               } h-2 rounded-full`}
               onClick={() => emblaApi?.scrollTo(index)}

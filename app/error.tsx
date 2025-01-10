@@ -19,7 +19,7 @@ export default function ErrorPage({
         transition={{ duration: 0.5 }}
         className="max-w-md w-full bg-white shadow-2xl rounded-2xl overflow-hidden"
       >
-        <div className="bg-red-600 text-white p-6 text-center">
+        <div className="bg-theme-darkBlue text-white p-6 text-center">
           <ExclamationTriangleIcon className="w-16 h-16 mx-auto mb-4 text-white" />
           <h1 className="text-3xl font-bold mb-2">Oops! Something Went Wrong</h1>
         </div>
@@ -35,8 +35,8 @@ export default function ErrorPage({
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => reset()}
-              className="w-full bg-red-600 text-white py-3 rounded-lg font-semibold 
-              hover:bg-red-700 transition-colors duration-300"
+              className="w-full bg-theme-darkBlue text-white py-3 rounded-lg font-semibold 
+              hover:bg-theme-gold transition-colors duration-300"
             >
               Try Again
             </motion.button>

@@ -105,7 +105,7 @@ export const DropdownMenuSubTrigger: React.FC<{
 }> = ({ children, inset, className }) => (
   <div
     className={cn(
-      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-red-100 data-[state=open]:bg-red-100",
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-theme-lightBlue data-[state=open]:bg-theme-lightBlue",
       inset && "pl-8",
       className
     )}

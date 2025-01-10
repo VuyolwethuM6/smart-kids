@@ -56,7 +56,7 @@ export default function BlogPostClient({ initialPost }: { initialPost: BlogPost 
             </div>
           )}
 
-          <div className="prose lg:prose-xl prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-red-600 prose-strong:text-gray-900 space-y-6">
+          <div className="prose lg:prose-xl prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-theme-darkBlue prose-strong:text-gray-900 space-y-6">
             <ReactMarkdown 
               remarkPlugins={[remarkGfm]}
               components={{
@@ -65,7 +65,7 @@ export default function BlogPostClient({ initialPost }: { initialPost: BlogPost 
                 p: ({node, ...props}) => <p className="mb-6 leading-relaxed" {...props} />,
                 ul: ({node, ...props}) => <ul className="list-disc list-inside mb-6 space-y-2" {...props} />,
                 ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-6 space-y-2" {...props} />,
-                blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-red-600 pl-4 italic text-gray-600 my-6" {...props} />
+                blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-theme-darkBlue pl-4 italic text-gray-600 my-6" {...props} />
               }}
             >
               {post.content}

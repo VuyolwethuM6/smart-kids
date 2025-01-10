@@ -9,7 +9,7 @@ import Gallery from '../components/Gallery'
 import { Button } from "@/components/ui/button"
 import { getBlogPosts } from '@/lib/blog'
 import { motion } from 'framer-motion'
-import { GraduationCap, Microscope, Tent } from 'lucide-react'
+import { GraduationCap, Microscope, Tent, BookOpen, Users, Brain } from 'lucide-react'
 
 export default function Home() {
   const latestPosts = getBlogPosts().slice(0, 3);
@@ -19,7 +19,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-red-600 to-red-800 text-white overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center bg-theme-darkBlue text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/msi-hero.jpg"
@@ -68,7 +68,7 @@ export default function Home() {
             <Button
               asChild
               size="lg"
-              className="bg-red-600 text-white hover:bg-red-700"
+              className="bg-theme-darkBlue text-white hover:bg-theme-gold hover:text-theme-darkBlue"
             >
               <Link href="#about">
                 Learn More
@@ -111,29 +111,77 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[/* ... */].map((service, index) => (
-            <motion.div 
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
-            </motion.div>
-          ))}
+            {[
+              {
+                icon: <BookOpen className="w-12 h-12 text-theme-darkBlue" />,
+                title: "Academic Support",
+                description: "Comprehensive tutoring and academic assistance across all subjects to help students excel in their studies."
+              },
+              {
+                icon: <Brain className="w-12 h-12 text-theme-darkBlue" />,
+                title: "Skills Development",
+                description: "Programs focused on developing critical thinking, problem-solving, and creative skills essential for future success."
+              },
+              {
+                icon: <Users className="w-12 h-12 text-theme-darkBlue" />,
+                title: "Mentorship Programs",
+                description: "One-on-one guidance and support to help students reach their full potential and achieve their goals."
+              },
+              {
+                icon: <GraduationCap className="w-12 h-12 text-theme-darkBlue" />,
+                title: "College Preparation",
+                description: "Specialized programs to prepare students for higher education and future career opportunities."
+              },
+              {
+                icon: <Microscope className="w-12 h-12 text-theme-darkBlue" />,
+                title: "STEM Education",
+                description: "Hands-on learning experiences in Science, Technology, Engineering, and Mathematics."
+              },
+              {
+                icon: <Tent className="w-12 h-12 text-theme-darkBlue" />,
+                title: "Holiday Programs",
+                description: "Engaging holiday camps and workshops that combine learning with fun activities."
+              }
+            ].map((service, index) => (
+              <motion.div 
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Impact Counter */}
-      <section className="py-20 bg-red-600 text-white">
+      <section className="py-20 bg-theme-darkBlue text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-12">Our Impact</h2>
           <div className="flex flex-wrap justify-center">
-            {[/* ... */].map((stat, index) => (
+            {[
+              {
+                number: "500+",
+                label: "Students Enrolled"
+              },
+              {
+                number: "95%",
+                label: "Pass Rate"
+              },
+              {
+                number: "50+",
+                label: "Expert Tutors"
+              },
+              {
+                number: "10+",
+                label: "Years Experience"
+              }
+            ].map((stat, index) => (
               <motion.div 
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -142,7 +190,7 @@ export default function Home() {
                 className="w-full sm:w-1/2 md:w-1/4 mb-8"
               >
                 <div className="text-5xl font-bold mb-2">{stat.number}</div>
-                <div>{stat.label}</div>
+                <div className="text-xl">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -203,7 +251,7 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="bg-red-600 text-white hover:bg-red-700"
+                className="bg-theme-darkBlue text-white hover:bg-theme-gold hover:text-theme-darkBlue"
               >
                 <Link href="/blog">
                   View All Blog Posts
@@ -226,7 +274,7 @@ export default function Home() {
             <Button 
               asChild
               size="lg"
-              className="bg-red-600 text-white hover:bg-red-700"
+              className="bg-theme-darkBlue text-white hover:bg-theme-gold hover:text-theme-darkBlue"
             >
               <Link href="#contact">
                 Get Involved

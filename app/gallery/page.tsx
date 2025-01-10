@@ -69,7 +69,7 @@ export default function Gallery() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-red-600 text-white overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-theme-darkBlue text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container relative mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -106,7 +106,7 @@ export default function Gallery() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? 'bg-red-600 text-white'
+                    ? 'bg-theme-darkBlue text-white'
                     : 'bg-white text-gray-600 hover:bg-gray-100'
                 }`}
               >
@@ -181,7 +181,7 @@ export default function Gallery() {
               />
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 text-white hover:text-red-500 transition-colors"
+                className="absolute top-4 right-4 text-white hover:text-theme-gold transition-colors"
               >
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

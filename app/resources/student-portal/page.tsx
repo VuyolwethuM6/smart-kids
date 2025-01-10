@@ -31,7 +31,7 @@ export default function StudentPortal() {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-theme-gold focus:border-theme-gold"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -43,7 +43,7 @@ export default function StudentPortal() {
                   <input
                     type="password"
                     id="password"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-theme-gold focus:border-theme-gold"
                     placeholder="Enter your password"
                   />
                 </div>
@@ -53,21 +53,21 @@ export default function StudentPortal() {
                     <input
                       type="checkbox"
                       id="remember"
-                      className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-theme-darkBlue focus:ring-theme-gold border-gray-300 rounded"
                     />
                     <label htmlFor="remember" className="ml-2 block text-sm text-gray-700">
                       Remember me
                     </label>
                   </div>
 
-                  <a href="#" className="text-sm text-red-600 hover:text-red-700">
+                  <a href="#" className="text-sm text-theme-darkBlue hover:text-theme-gold">
                     Forgot your password?
                   </a>
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full bg-red-600 text-white hover:bg-red-700"
+                  className="w-full bg-theme-darkBlue text-white hover:bg-theme-gold hover:text-theme-darkBlue"
                 >
                   Sign In
                 </Button>
@@ -87,7 +87,7 @@ export default function StudentPortal() {
               </ul>
               <Button
                 variant="outline"
-                className="w-full border-red-600 text-red-600 hover:bg-red-50"
+                className="w-full border-theme-darkBlue text-theme-darkBlue hover:bg-theme-lightBlue"
               >
                 Register Now
               </Button>

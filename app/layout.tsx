@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
-  authors: [{ name: 'MSI Team' }],
-  creator: 'MSI Team',
+  authors: [{ name: 'Smart Kids Team' }],
+  creator: 'Smart Kids Team',
   openGraph: {
     type: 'website',
     locale: 'en_ZA',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: '@msi_education'
+    creator: '@smartkids_education'
   },
   robots: {
     index: true,
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
-  themeColor: '#dc2626',
+  themeColor: '#003366',
   manifest: '/manifest.json',
   icons: {
     icon: '/favicon.ico',
