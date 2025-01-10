@@ -94,7 +94,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src="/images/msi_logo.png"
               alt="Smart Kids X Academy Logo"
               width={50}
               height={50}
