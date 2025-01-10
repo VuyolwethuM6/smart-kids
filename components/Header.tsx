@@ -75,7 +75,7 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/images/msi_logo.png"
-              alt="MSI Logo"
+              alt="Smart Kids X Academy Logo"
               width={50}
               height={50}
               className="w-12 h-12"
