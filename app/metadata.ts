@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "MSI - Maths and Science Infinity",
+  name: "Smart Kids X Acaademy",
   description: "Empowering youth through STEM education. MSI is a Black Founded & Youth Managed Non-Profit Organization dedicated to providing quality mathematics and science education in South Africa.",
   url: "https://mathsandscienceinfinity.org",
-  ogImage: "/images/msi-loo.png",
+  ogImage: "/images/msi_logo.png",
   links: {
     facebook: "https://facebook.com/mathsandscienceinfinity",
-    twitter: "https://twitter.com/msi_education",
-    instagram: "https://instagram.com/msi_education"
+    twitter: "https://twitter.com/smartkids_education",
+    instagram: "https://instagram.com/smartkids_education"
   },
   keywords: [
     "STEM education",
